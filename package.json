@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Crawlink/material-angular-paging.git"
+    "url": "git+https://github.com/sachinsemlety/ngPagination.git"
   },
   "keywords": [
     "Angular",
@@ -29,7 +29,7 @@
   ],
   "author": "Sachin Semlety",
   "bugs": {
-    "url": "https://github.com/Crawlink/material-angular-paging/issues"
+    "url": "https://github.com/sachinsemlety/ngPagination/issues"
   },
-  "homepage": "https://github.com/Crawlink/material-angular-paging#readme"
+  "homepage": "https://github.com/sachinsemlety/ngPagination/#readme"
 }
