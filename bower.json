@@ -1,11 +1,11 @@
 {
-  "name": "material-angular-paging",
-  "homepage": "http://crawlink.com",
+  "name": "ng-paging",
+  "homepage": "",
   "version": "0.0.1",
   "authors": [
-    "Crawlink <crawlink.com@gmail.com>"
+    "Sachin Semlety <sachinsemlety11@gmail.com>"
   ],
-  "description": "A Angular Derective for Pagination a Material design website",
+  "description": "Angular Pagination Directive for Pagination",
   "main": "",
   "keywords": [
     "angular",
