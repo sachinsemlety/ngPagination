@@ -6,7 +6,7 @@
     <title>Angular Pagination(ngPagination)</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
@@ -20,16 +20,16 @@
 
             $scope.paging = {
                 total: 100,
-                current: 1,
+                recent: 1,
                 onPageChanged: loadPages,
             };
 
             function loadPages() {
-                console.log('Current page is : ' + $scope.paging.current);
+                console.log('Current page is : ' + $scope.paging.recent);
 
                 // TODO : Load current page Data here
 
-                $scope.recentPage = $scope.paging.current;
+                $scope.recentPage = $scope.paging.recent;
             }
 
         }]);
@@ -46,7 +46,7 @@
             </md-content>
         </section>
         <section layout="row" layout-padding="">
-            <ng-paging flex cl-pages="paging.total" cl-steps="6" cl-page-changed="paging.onPageChanged()" cl-align="start start" cl-current-page="paging.current"></ng-paging>
+            <ng-paging flex pages="paging.total" steps="6" on-page-changed="paging.onPageChanged()" align="start start" recent-page="paging.recent"></ng-paging>
         </section>
     </div>
 </body>
