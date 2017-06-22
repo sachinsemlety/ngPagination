@@ -32,7 +32,7 @@ To put entry in bower.json
 bower install ngPagination --save
 ```
 
-or simply copy `ng-pagination.min.js` file from `dist` folder on [github](https://github.com/sachinsemlety/ngPagination/blob/master/dist/dist.min.js).
+or simply copy `ng-pagination.min.js` file from `dist` folder on [github](https://github.com/sachinsemlety/ngPagination/blob/master/dist/ng-pagination.min.js).
 
 ##### 02 Embeding
 Embed script to your HTML document anywhere after `angular` script:
@@ -80,7 +80,7 @@ ngPagination Directive uses 4 attributes: `pages`, `stride`,`on-page-changed` an
 
 ### Demo Page
 
-You can see [demo](https://github.com/sachinsemlety/ngPagination/blob/master/dist/dist.min.js)
+You can see [demo](https://github.com/sachinsemlety/ngPagination/blob/master/dist/ng-pagination.min.js)
 
 ### Contribution
 sachinsemlety
