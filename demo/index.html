@@ -18,14 +18,14 @@
             function testCtrl($scope){
                 $scope.recentPage = 0;
 
-            $scope.paging = {
+            $scope.pagination = {
                 numberOfPages: 50,
                 recent: 1,
                 onPageChanged: showPages,
             };
 
             function showPages() {
-                $scope.recentPage = $scope.paging.recent;
+                $scope.recentPage = $scope.pagination.recent;
             }
      }
 
@@ -41,7 +41,7 @@
             </md-content>
         </section>
         <section layout="row" layout-padding="">
-            <ng-paging flex pages="paging.numberOfPages" stride="3" on-page-changed="paging.onPageChanged()" recent-page="paging.recent"
+            <ng-paging flex pages="pagination.numberOfPages" stride="3" on-page-changed="pagination.onPageChanged()" recent-page="pagination.recent"
                 style="text-align: center"></ng-paging>
         </section>
     </div>
