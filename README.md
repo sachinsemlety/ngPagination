@@ -3,12 +3,7 @@ Angular Pagination Directive for Pagination using Angular Material
 
 
 **features**
-- nice UI with fixed count of elements, so your pagination never broke the design if you have a large amount of pages; you can try this feature on [demo page](http://accetone.github.io/ng-pagination-demo)
-- saving current page to url query and use this on reload
-- css free - you can stylize directive as you want
-- separators and navigation arrows
-- lightweight, only 2.42 KB, this's cool, right? ;)
-- that's all folks!
+will be added soon
 
 ### Usage
 
@@ -20,7 +15,24 @@ To install `ngPagination` you can use bower
 bower install ngPagination
 ```
 
-or copy `ng-pagination.min.js` file from `dist` folder on [github](https://github.com/sachinsemlety/ngPagination/blob/master/dist/dist.min.js).
+To run as root use
+
+```
+bower install ngPagination --allow-root
+
+or
+
+sudo bower install ngPagination
+
+```
+
+To put entry in bower.json
+
+```
+bower install ngPagination --save
+```
+
+or simply copy `ng-pagination.min.js` file from `dist` folder on [github](https://github.com/sachinsemlety/ngPagination/blob/master/dist/dist.min.js).
 
 ##### 02 Embeding
 Embed script to your HTML document anywhere after `angular` script:
@@ -29,7 +41,7 @@ Embed script to your HTML document anywhere after `angular` script:
 <script src="path/to/ng-pagination.min.js"></script>
 ```
 
-Write activation method in your angular controller. It will be called each time when current page changed, so you can load and show new portion of your data. Also activation method will be called once after directive initialized:
+Javascript Example Code
 
 ```javascript
  var app = angular.module("TestApp", ['ngMaterial', 'ngPagination']);
@@ -48,29 +60,30 @@ Write activation method in your angular controller. It will be called each time 
         }
 ```
 
-Insert pagination directive into your markup:
+Html Example Code:
 
 ```html
 <ng-paging flex pages="paging.numberOfPages" stride="3" on-page-changed="paging.onPageChanged()" recent-page="paging.recent" style="text-align: center"></ng-paging>
 ```
 
 ### Options
-Directive have 4 required attributes: `pages`, `stride`,`on-page-changed` and `recent-page`.
-- `pages` - total number of items that your want to paginate
-- `stride` - number of items per page
-- `on-page-changed` - function that will be called when current page changed, also called once after directive initialized
-- `recent-page` - number of items per page
+ngPagination Directive uses 4 attributes: `pages`, `stride`,`on-page-changed` and `recent-page`.
+- `pages` - total number of pages
+- `stride` - number of steps you want to show in pagination
+- `on-page-changed` - function that will be called when page changed
+- `recent-page` - this is the current page or recent page
 
 
-### Demo
+### Demo Image
 
-You can see [demo](https://github.com/sachinsemlety/ngPagination/blob/master/dist/dist.min.js)
 ![demo image](https://github.com/sachinsemlety/ngPagination/blob/master/demo/ngPagination-demo.png)
 
-### Contribution
+### Demo Page
 
-If you find error or want improve something, feel free to create issues and pull requests.
+You can see [demo](https://github.com/sachinsemlety/ngPagination/blob/master/dist/dist.min.js)
+
+### Contribution
+sachinsemlety
 
 ### License
-
-Licensed under MIT.
+will be added soon
