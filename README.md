@@ -44,26 +44,27 @@ Embed script to your HTML document anywhere after `angular` script:
 Javascript Example Code
 
 ```javascript
- var app = angular.module("TestApp", ['ngMaterial', 'ngPagination']);
-     app.controller("testCtrl", testCtrl)
-        function testCtrl($scope){
-        $scope.recentPage = 0;
+  var app = angular.module("TestApp", ['ngMaterial', 'ngPagination']);
+        app.controller("testCtrl", testCtrl)
+          function testCtrl($scope){
+            $scope.recentPage = 0;
 
-        $scope.paging = {
-            numberOfPages: 50,
-            recent: 1,
-            onPageChanged: showPages,
-        };
+            $scope.pagination = {
+                numberOfPages: 50,
+                recent: 1,
+                onPageChanged: showPages,
+            };
 
-        function showPages() {
-            $scope.recentPage = $scope.paging.recent;
-        }
+           function showPages() {
+                $scope.recentPage = $scope.pagination.recent;
+            }
+     }
 ```
 
 Html Example Code:
 
 ```html
-<ng-paging flex pages="paging.numberOfPages" stride="3" on-page-changed="paging.onPageChanged()" recent-page="paging.recent" style="text-align: center"></ng-paging>
+<ng-paging flex pages="pagination.numberOfPages" stride="3" on-page-changed="pagination.onPageChanged()" recent-page="pagination.recent" style="text-align: center"></ng-paging>
 ```
 
 ### Options
