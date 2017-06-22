@@ -65,6 +65,7 @@ Directive have 4 required attributes: `pages`, `stride`,`on-page-changed` and `r
 ### Demo
 
 You can see [demo](https://github.com/sachinsemlety/ngPagination/blob/master/dist/dist.min.js)
+![demo image](https://github.com/sachinsemlety/ngPagination/blob/master/demo/ngPagination-demo.png)
 
 ### Contribution
 
