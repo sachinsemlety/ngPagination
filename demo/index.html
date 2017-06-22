@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Material Angular Paging Demo</title>
+    <title>ngPagination Demo</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
@@ -12,47 +13,38 @@
     <script src="../bower_components/angular-material/angular-material.min.js"></script>
     <script src="../bower_components/ng-paging/dist/dist.min.js"></script>
     <script>
-        var app = angular.module("DemoApp", ['ngMaterial', 'ngPagination']);
-        app.controller("MainController", ['$scope', function ($scope) {
-
-            $scope.currentPage = 0;
+        var app = angular.module("TestApp", ['ngMaterial', 'ngPagination']);
+        app.controller("testCtrl", testCtrl)
+            function testCtrl($scope){
+                $scope.recentPage = 0;
 
             $scope.paging = {
-                total: 100,
-                current: 1,
-                onPageChanged: loadPages,
+                numberOfPages: 50,
+                recent: 1,
+                onPageChanged: showPages,
             };
 
-            function loadPages() {
-                console.log('Current page is : ' + $scope.paging.current);
-
-                // TODO : Load current page Data here
-
-                $scope.currentPage = $scope.paging.current;
+            function showPages() {
+                $scope.recentPage = $scope.paging.recent;
             }
-
-        }]);
+     }
 
     </script>
-
 </head>
 
-<body ng-app="DemoApp" layout="column">
-<div flex ng-controller="MainController" layout="column">
-    <section flex>
-        <md-content layout-padding="">
-            <h1>Material Angular Paging demo</h1>
-            <div>Loaded data form Page <strong>{{currentPage}}</strong></div>
-
-        </md-content>
-    </section>
-
-    <section layout="row" layout-padding="">
-        <ng-paging flex cl-pages="paging.total" cl-steps="3" cl-page-changed="paging.onPageChanged()" cl-align="start start" recent-page="paging.current" style="text-align: center"></ng-paging>
-
-    </section>
-
-</div>
-
+<body ng-app="TestApp" layout="column">
+    <div flex ng-controller="testCtrl" layout="column">
+        <section flex>
+            <md-content layout-padding="">
+                <h1>Angular Pagination Demo(ngPagination)</h1>
+                <div>Recent Active Page : <b>{{recentPage}}</b></div>
+            </md-content>
+        </section>
+        <section layout="row" layout-padding="">
+            <ng-paging flex pages="paging.numberOfPages" stride="3" on-page-changed="paging.onPageChanged()" recent-page="paging.recent"
+                style="text-align: center"></ng-paging>
+        </section>
+    </div>
 </body>
+
 </html>
