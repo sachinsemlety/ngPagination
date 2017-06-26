@@ -95,7 +95,9 @@ Html Example Code:
 <ng-paging flex pages="pagination.numberOfPages" stride="3" on-page-changed="pagination.onPageChanged()" recent-page="pagination.recent" style="text-align: center"></ng-paging>
 ```
 
-```Full demo html code
+Full demo html code:
+
+```html
 <body ng-app="TestApp" layout="column">
     <div flex ng-controller="testCtrl" layout="column">
         <section flex>
@@ -137,6 +139,3 @@ You can see [demo](https://jsfiddle.net/sachinsemlety/u34rc66c/)
 
 ### Contribution
 sachinsemlety
-
-### License
-will be added soon
