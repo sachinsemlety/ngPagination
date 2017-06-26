@@ -44,10 +44,12 @@ Embed script to your HTML document anywhere after `angular` script:
 Javascript Example Code
 
 ```javascript
-  var app = angular.module("TestApp", ['ngMaterial', 'ngPagination']);
+   var app = angular.module("TestApp", ['ngMaterial', 'ngPagination']);
         app.controller("testCtrl", testCtrl)
-          function testCtrl($scope){
+            function testCtrl($scope){
             $scope.recentPage = 0;
+            $scope.pageSize = 10;
+            $scope.data =[];
 
             $scope.pagination = {
                 numberOfPages: 50,
@@ -55,16 +57,62 @@ Javascript Example Code
                 onPageChanged: showPages,
             };
 
-           function showPages() {
+            init();
+
+            function showPages() {
                 $scope.recentPage = $scope.pagination.recent;
             }
+
+            function init(){
+                var noOfPages = $scope.pagination.numberOfPages;
+                for (var i=0; i<noOfPages*11; i++) {
+                $scope.data.push("Item No. "+(i-10));
+            }
+         }
+
      }
+
+     app.filter('startFrom', function() {
+    return function(input, start) {
+        if(start >= 0){
+            start = +start;
+            return input.slice(start);
+        }else{
+            return false;
+        }
+    }
+    });
+
 ```
 
 Html Example Code:
 
 ```html
 <ng-paging flex pages="pagination.numberOfPages" stride="3" on-page-changed="pagination.onPageChanged()" recent-page="pagination.recent" style="text-align: center"></ng-paging>
+```
+
+```Full demo html code
+<body ng-app="TestApp" layout="column">
+    <div flex ng-controller="testCtrl" layout="column">
+        <section flex>
+            <md-content layout-padding="">
+                <h1>Angular Pagination Demo(ngPagination)</h1>
+                <div>Recent Active Page : <b>{{recentPage}}</b></div>
+                <div ng-hide="gotoPage === null || gotoPage > pagination.numberOfPages">
+                    <ul>
+                        <li ng-repeat="item in data | startFrom:recentPage*pageSize | limitTo:pageSize">
+                            {{item}}
+                        </li>
+                    </ul>
+                </div>
+            </md-content>
+        </section>
+        <section layout="row" layout-padding="">
+            <ng-paging flex pages="pagination.numberOfPages" stride="3" on-page-changed="pagination.onPageChanged()" recent-page="pagination.recent"
+                style="text-align: center"></ng-paging>
+        </section>
+    </div>
+</body>
 ```
 
 ### Options
