@@ -125,7 +125,7 @@ ngPagination Directive uses 4 attributes: `pages`, `stride`,`on-page-changed` an
 
 ### Demo Image
 
-![demo image](https://github.com/sachinsemlety/ngPagination/blob/master/demo/ngPagination-demo.png)
+![demo image](https://github.com/sachinsemlety/ngPagination/blob/master/demo/ngPagination_demo.png)
 
 ### Demo Page
 
