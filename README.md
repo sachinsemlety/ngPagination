@@ -7,7 +7,7 @@ Angular Pagination Directive for Pagination using Angular Material
 - Jump to any page that you want directly by searching.
 - ngPagination has nice next/forward  and navigation arrows.
 - ngPagination directive can be customised as you want.
-- this library is lightweight, only 3.8 KB, that's cool, right? ;)
+- It is lightweight, only 3.8 KB, that's cool, right? ;)
 
 ### Usage
 
