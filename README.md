@@ -2,8 +2,12 @@
 Angular Pagination Directive for Pagination using Angular Material
 
 
-**features**
-will be added soon
+**Features**
+- ngPagination with nice and responsive UI that can be used for web as well as mobile devices.
+- Search the page that you want to see directly by searching.
+- ngPagination has nice next/forward  and navigation arrows.
+- ngPagination directive can be customise as you want.
+- this library is lightweight, only 3.8 KB, that's cool, right? ;)
 
 ### Usage
 
