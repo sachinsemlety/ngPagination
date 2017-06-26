@@ -114,8 +114,7 @@ Full demo html code:
             </md-content>
         </section>
         <section layout="row" layout-padding="">
-            <ng-paging flex pages="pagination.numberOfPages" stride="3" on-page-changed="pagination.onPageChanged()" recent-page="pagination.recent"
-                style="text-align: center"></ng-paging>
+            <ng-paging flex pages="pagination.numberOfPages" stride="3" on-page-changed="pagination.onPageChanged()" recent-page="pagination.recent"></ng-paging>
         </section>
     </div>
 </body>
