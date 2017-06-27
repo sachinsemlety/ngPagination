@@ -19,10 +19,6 @@
             $scope.recentPage = 0;
             $scope.pageSize = 10;
             $scope.data =[];
-            $scope.$on('gotoPage', function (evt, value) {
-                console.log(value);
-                $scope.variable = value;
-            });
 
             $scope.pagination = {
                 numberOfPages: 50,
