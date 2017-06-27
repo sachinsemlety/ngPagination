@@ -12,7 +12,7 @@ gulp.task('compress', ['clean'],function (cb) {
   pump([
         gulp.src('src/*.js').pipe(concat('ng-pagination.min.js')),
         uglify(),
-        gulp.dest('dist/')
+        gulp.dest('dist')
     ],
     cb
   );
