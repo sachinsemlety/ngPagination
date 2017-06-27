@@ -10,7 +10,7 @@ var defaultTasks = ['clean', 'compress'];
 
 gulp.task('compress', ['clean'],function (cb) {
   pump([
-        gulp.src('src/*.js').pipe(concat('ng-pagination.js')),
+        gulp.src('src/*.js').pipe(concat('ng-pagination.min.js')),
         uglify(),
         gulp.dest('dist')
     ],
