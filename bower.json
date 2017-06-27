@@ -13,7 +13,6 @@
     "Material",
     "Design"
   ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
